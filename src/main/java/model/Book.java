@@ -21,6 +21,16 @@ public class Book implements Comparable<Book> {
         return title.compareTo(b.title);
     }
 
+    public Book() {
+    }
+
+    public Book(String title, String author, int yearRelease){
+        this.title = title;
+        this.author = author;
+        this.yearRelease = yearRelease;
+
+    }
+
     static class CompareTitle implements Comparator<Book> {
 
         @Override
@@ -42,5 +52,14 @@ public class Book implements Comparable<Book> {
                 return b1.getAuthor().compareTo(b2.getAuthor());
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", yearRelease=" + yearRelease +
+                ", author='" + author + '\'' +
+                '}';
     }
 }
