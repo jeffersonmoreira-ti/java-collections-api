@@ -1,31 +1,31 @@
 package app;
 
-import model.TaskList;
+import service.TaskListService;
 
 public class Main {
     public static void main(String[] args) {
 
-        TaskList taskList = new TaskList();
+        TaskListService taskListService = new TaskListService();
         int totalTasksQuantity = 0;
 
         for (int x = 0; x < 100; x++) {
-            taskList.addTask("Task " + x);
+            taskListService.addTask("Task " + x);
             System.out.println("Task " + x + " Added");
             totalTasksQuantity++;
         }
 
         System.out.println("Added Tasks Total: " + totalTasksQuantity);
-        taskList.getTasksDescription();
+        taskListService.getTasksDescription();
 
-        System.out.println("Quantity of Tasks in the list: " + taskList.getTasksQuantity());
+        System.out.println("Quantity of Tasks in the list: " + taskListService.getTasksQuantity());
 
-        taskList.deleteTask("Task 94");
-        taskList.deleteTask("Task 64");
-        taskList.deleteTask("Task 22");
+        taskListService.deleteTask("Task 94");
+        taskListService.deleteTask("Task 64");
+        taskListService.deleteTask("Task 22");
 
-        taskList.getTasksDescription();
+        taskListService.getTasksDescription();
 
-        System.out.println("Quantity of Tasks in the list: " + taskList.getTasksQuantity());
+        System.out.println("Quantity of Tasks in the list: " + taskListService.getTasksQuantity());
     }
 
 }

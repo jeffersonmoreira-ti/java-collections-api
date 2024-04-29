@@ -10,8 +10,8 @@ public class MainPerson {
         personSorting.addPerson("Chum",30,1.72);
         personSorting.addPerson("Cory",28,1.88);
 
-        System.out.println(personSorting.personOrderedByAge());
+        System.out.println(personSorting.personSortedByAge());
         System.out.println("\n-------------------------------");
-        System.out.println(personSorting.personOrderedByHeight());
+        System.out.println(personSorting.personSortedByHeight());
     }
 }

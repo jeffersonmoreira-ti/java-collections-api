@@ -1,7 +1,8 @@
-package model;
+package service;
 
 import lombok.Getter;
 import lombok.Setter;
+import model.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,15 +10,15 @@ import java.util.List;
 
 @Getter
 @Setter
-public class TaskList {
+public class TaskListService {
     private List<Task> taskList;
 
 
-    public TaskList() {
+    public TaskListService() {
         this.taskList = new ArrayList<>();
     }
 
-    public TaskList(List<Task> taskList) {
+    public TaskListService(List<Task> taskList) {
         this.taskList = taskList = new ArrayList<>();
     }
 

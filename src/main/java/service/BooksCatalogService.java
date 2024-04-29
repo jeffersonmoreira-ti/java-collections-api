@@ -1,18 +1,18 @@
-package model;
+package service;
 
 import lombok.Getter;
 import lombok.Setter;
+import model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Getter
 @Setter
-public class BooksCatalog {
+public class BooksCatalogService {
     private List<Book> booksCatalog = new ArrayList<>();
 
-    public BooksCatalog() {
+    public BooksCatalogService() {
     }
 
     public void addBook(Book book) {

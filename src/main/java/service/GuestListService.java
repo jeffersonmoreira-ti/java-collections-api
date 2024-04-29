@@ -1,12 +1,14 @@
-package model;
+package service;
+
+import model.Guest;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class GuestList {
+public class GuestListService {
     private Set<Guest> guestList;
 
-    public GuestList() {
+    public GuestListService() {
         this.guestList = new HashSet<>();
     }
 

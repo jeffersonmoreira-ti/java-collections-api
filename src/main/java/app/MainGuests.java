@@ -1,28 +1,28 @@
 package app;
 
-import model.GuestList;
+import service.GuestListService;
 
 public class MainGuests {
     public static void main(String[] args) {
-        GuestList guestList = new GuestList();
+        GuestListService guestListService = new GuestListService();
 
-        System.out.println("Total # of guests: " + guestList.countGuests());
+        System.out.println("Total # of guests: " + guestListService.countGuests());
 
-        guestList.addGuestToList("Jeff", 159357);
-        guestList.addGuestToList("Monty", 789456);
-        guestList.addGuestToList("Emeth", 452187);
-        guestList.addGuestToList("Loyd", 452187);
-        guestList.addGuestToList("Bill", 963785);
+        guestListService.addGuestToList("Jeff", 159357);
+        guestListService.addGuestToList("Monty", 789456);
+        guestListService.addGuestToList("Emeth", 452187);
+        guestListService.addGuestToList("Loyd", 452187);
+        guestListService.addGuestToList("Bill", 963785);
 
-        guestList.showGests();
+        guestListService.showGests();
 
-        System.out.println("Total # of guests: " + guestList.countGuests());
+        System.out.println("Total # of guests: " + guestListService.countGuests());
 
-        guestList.deleteGuestByInvitationCode(452187);
+        guestListService.deleteGuestByInvitationCode(452187);
 
-        guestList.showGests();
+        guestListService.showGests();
 
-        System.out.println("Total # of guests: " + guestList.countGuests());
+        System.out.println("Total # of guests: " + guestListService.countGuests());
 
     }
 

@@ -17,13 +17,13 @@ public class PersonSorting {
         this.personList.add(new Person(name, age, height));
     }
 
-    public List<Person> personOrderedByAge() {
+    public List<Person> personSortedByAge() {
         List<Person> personByAge = new ArrayList<>(personList);
         Collections.sort(personByAge);
         return personByAge;
     }
 
-    public List<Person> personOrderedByHeight() {
+    public List<Person> personSortedByHeight() {
         List<Person> personByHeight = new ArrayList<>(personList);
         personByHeight.sort(new ComparatorPersonByHeight());
         return personByHeight;

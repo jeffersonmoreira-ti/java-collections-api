@@ -1,35 +1,35 @@
 package app;
 
 import model.Contact;
-import model.ContactBook;
+import service.ContactBookService;
 
 public class MainContacts {
     public static void main(String[] args) {
-        ContactBook contactBook = new ContactBook();
+        ContactBookService contactBookService = new ContactBookService();
 
-        contactBook.showContacts();
-        contactBook.countContacts();
+        contactBookService.showContacts();
+        contactBookService.countContacts();
 
-        contactBook.addContact("Jeff Daniels", 456987);
-        contactBook.addContact("Jeff Bridges", 3216548);
-        contactBook.addContact("Jeff Goldblum", 553218563);
-        contactBook.addContact("Thomas Goldblum", 3218563);
-        contactBook.addContact("Jeff Dean Morgan", 15936542);
-        contactBook.addContact("Jeff Wright", 1254896);
-        contactBook.addContact("Jeff Tambor", 231654);
-        contactBook.addContact("Jeff Rush", 23198467);
-        contactBook.addContact("Jeff Combs", 75326482);
-        contactBook.addContact("Jeff Donovan", 123489657);
-        contactBook.addContact("Jeff Jones", 1234789);
+        contactBookService.addContact("Jeff Daniels", 456987);
+        contactBookService.addContact("Jeff Bridges", 3216548);
+        contactBookService.addContact("Jeff Goldblum", 553218563);
+        contactBookService.addContact("Thomas Goldblum", 3218563);
+        contactBookService.addContact("Jeff Dean Morgan", 15936542);
+        contactBookService.addContact("Jeff Wright", 1254896);
+        contactBookService.addContact("Jeff Tambor", 231654);
+        contactBookService.addContact("Jeff Rush", 23198467);
+        contactBookService.addContact("Jeff Combs", 75326482);
+        contactBookService.addContact("Jeff Donovan", 123489657);
+        contactBookService.addContact("Jeff Jones", 1234789);
 
-        contactBook.showContacts();
-        contactBook.countContacts();
+        contactBookService.showContacts();
+        contactBookService.countContacts();
 
-        for (Contact contact : contactBook.findContactContainingName("Goldblum")) {
+        for (Contact contact : contactBookService.findContactContainingName("Goldblum")) {
             System.out.println(contact);
         }
 
 
-        System.out.println(contactBook.updateContactPhoneNumber("Jeff Goldblum",13218563));
+        System.out.println(contactBookService.updateContactPhoneNumber("Jeff Goldblum",13218563));
     }
 }

@@ -1,12 +1,14 @@
-package model;
+package service;
+
+import model.Contact;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class ContactBook {
+public class ContactBookService {
     private Set<Contact> contacts;
 
-    public ContactBook() {
+    public ContactBookService() {
         this.contacts = new HashSet<>();
     }
 
