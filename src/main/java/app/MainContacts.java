@@ -22,6 +22,19 @@ public class MainContacts {
         contactBookService.addContact("Jeff Donovan", 123489657);
         contactBookService.addContact("Jeff Jones", 1234789);
 
+
+        contactBookService.createContact("Jeff Daniels", 456987);
+        contactBookService.createContact("Jeff Bridges", 3216548);
+        contactBookService.createContact("Jeff Goldblum", 553218563);
+        contactBookService.createContact("Thomas Goldblum", 3218563);
+        contactBookService.createContact("Jeff Dean Morgan", 15936542);
+        contactBookService.createContact("Jeff Wright", 1254896);
+        contactBookService.createContact("Jeff Tambor", 231654);
+        contactBookService.createContact("Jeff Rush", 23198467);
+        contactBookService.createContact("Jeff Combs", 75326482);
+        contactBookService.createContact("Jeff Donovan", 123489657);
+        contactBookService.createContact("Jeff Jones", 1234789);
+
         contactBookService.showContacts();
         contactBookService.countContacts();
 
@@ -29,7 +42,9 @@ public class MainContacts {
             System.out.println(contact);
         }
 
+        System.out.println(contactBookService.updateContactPhoneNumber("Jeff Goldblum", 13218563));
 
-        System.out.println(contactBookService.updateContactPhoneNumber("Jeff Goldblum",13218563));
+        contactBookService.deleteContactByKey("Jeff Goldblum");
+
     }
 }

@@ -2,11 +2,14 @@ package service;
 
 import model.Contact;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class ContactBookService {
     private Set<Contact> contacts;
+    private Map<String, Integer> contactsMap = new HashMap<>();
 
     public ContactBookService() {
         this.contacts = new HashSet<>();
@@ -14,6 +17,16 @@ public class ContactBookService {
 
     public void addContact(String name, int phoneNumber) {
         contacts.add(new Contact(name, phoneNumber));
+    }
+
+    public void createContact(String name, Integer phoneNumber) {
+        contactsMap.put(name, phoneNumber);
+    }
+
+    public void deleteContactByKey(String name) {
+        if (!this.contactsMap.isEmpty()) {
+            contactsMap.remove(name);
+        }
     }
 
     public void showContacts() {
@@ -27,6 +40,10 @@ public class ContactBookService {
             }
         }
         return null;
+    }
+
+    public Integer getContactPhoneNumberByKey(String name) {
+        return contactsMap.isEmpty() ? null : contactsMap.get(name);
     }
 
     public Set<Contact> findContactContainingName(String name) {
@@ -49,7 +66,7 @@ public class ContactBookService {
         return updatedContact;
     }
 
-    public void countContacts(){
+    public void countContacts() {
         System.out.println(contacts.size());
     }
 }
